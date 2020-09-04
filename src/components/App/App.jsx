@@ -1,11 +1,11 @@
 import React from 'react';
 import { UserProvider } from '../../context/UserContext';
-import Home from '../Home/Home';
+import UserList from '../UserList/UserList';
 
-const App = () => {
+const App = ({loadedUsers}) => {
   return (
-    <UserProvider>
-      <Home/>
+    <UserProvider loadedUsers={loadedUsers}>
+      <UserList/>
     </UserProvider>
   )
 }

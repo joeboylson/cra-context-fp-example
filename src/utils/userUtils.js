@@ -1,18 +1,10 @@
 import { curry } from 'lodash';
 
-const setName = curry((newName, user) => {
-    user.name = newName;
-    return {...user}
-});
+export const setName = curry((name, user) => ({...user, name}) );
 
-const setLoggedIn = curry((loggedIn, user) => {
-    user.loggedIn = loggedIn
-    return {...user};
+export const setNameById = curry((name, id, users) => {
+    return users.map(user => {
+        if (user.id !== id) return user;
+        return setName()(name, user)
+    })
 });
-
-const setLastUpdatedAt = curry((dateValueOf, user) => {
-  user.lastUpdatedAt = dateValueOf
-  return {...user};
-});
-
-export { setName, setLoggedIn, setLastUpdatedAt }

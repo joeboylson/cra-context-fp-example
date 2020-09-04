@@ -5,13 +5,13 @@ const UserContext = React.createContext()
 const useUserContext = () => useContext(UserContext);
 
 
-const UserProvider = ({children}) => {
+const UserProvider = ({children, loadedUsers}) => {
 
-  const [user, _setUser] = useState({ name: 'Tania', loggedIn: true, lastUpdatedAt: new Date().valueOf() })
-  const setUser = tap(_setUser);
+  const [users, _setUsers] = useState(loadedUsers)
+  const setUsers = tap(_setUsers);
 
   return (
-    <UserContext.Provider value={{user, setUser}}>
+    <UserContext.Provider value={{users, setUsers}}>
       {children}
     </UserContext.Provider>
   )
