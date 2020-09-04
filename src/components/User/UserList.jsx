@@ -1,7 +1,7 @@
 import React from 'react'
 import { useUserContext } from '../../context/UserContext';
 import { setNameById } from '../../utils/userUtils';
-import { pipe } from '../../utils/fp';
+import { pipe } from 'lodash/fp';
 import UserItem from './UserItem';
 
 const Home = () => {

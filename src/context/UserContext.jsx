@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import { tap } from '../utils/fp';
+import { tap } from 'lodash/fp';
 
 const UserContext = React.createContext()
 const useUserContext = () => useContext(UserContext);
