@@ -1,3 +1,9 @@
+This app is a simple example of React Context and functional programming practices working together.
+
+Created By: Joe Boylson
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
