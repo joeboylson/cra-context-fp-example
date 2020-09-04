@@ -1,5 +1,4 @@
 import React from 'react'
-import { cloneDeep } from 'lodash';
 import { useUserContext } from '../../context/UserContext';
 import { setName, setLoggedIn, setLastUpdatedAt } from '../../utils/userUtils';
 import { pipe } from '../../utils/fp';
@@ -9,7 +8,6 @@ const Home = () => {
     const {user, setUser} = useUserContext()
 
     const handleButtonClick = () => pipe(
-        cloneDeep,
         setName('TANIA'),
         setLoggedIn(false),
         setLastUpdatedAt(new Date().valueOf()),
